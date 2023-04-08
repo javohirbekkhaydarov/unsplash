@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050729;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    /* background-image: url(../img/bg.jpeg); */
+    color: #ffffff;
+    /* min-height: 30vh; */
+}
+header img {
+    filter: brightness(50%);
+    background-size: cover;
+    height: 95vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+header h2 {
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    width: 70%;
+}
+header p {
+    padding: 2rem;
+    font-size: 36px;
+    font-style: normal;
+    line-height: 48px;
+    font-weight: 700;
+    width: 70%;
+}
+nav {
+    padding: 0px 30px;
+}
+.logo{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo span {
+    display: block;
+    font-size: 26px;
+    font-style: normal;
+
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+
+}.logo img {
+
+     width: 50px;
+     height: 50px;
+
+}
+
+
+#logo {
+    color: #ffffff;
+    text-decoration: none;
+}
+.search-form {
+    padding: 1rem;
+    display: flex;
+    width: 60%;
+}
+.search-form input {
+    font-size: 17px;
+    font-weight: 300;
+    font-style: normal;
+    color: #1a1a1a;
+    line-height: 32px;
+    padding: 1rem 1.95rem;
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100%;
+    outline: #05a081;
+}
+
+.search-form button {
+    border: 0;
+    padding: 1.2rem;
+    font-size: 1rem;
+    color: #919191;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s ease;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+
+}
+
+.gallery-item {
+
+    border-radius: 5px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.04);
+    filter: brightness(0.8);
+    cursor: zoom-in;
+}
+.gallery-info {
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-40px);
+    visibility: hidden;
+}
+
+.gallery-item:hover .gallery-info{
+    visibility: visible !important;
+}
+.gallery-info p {
+    color: #dedede;
+    /* position: absolute; */
+    bottom: 0;
+    margin: 0 20px;
+    text-align: left;
+    left: 0;
+}
+.gallery-info a {
+    color: #919191;
+    /* position: absolute; */
+    bottom: 0;
+    margin: 0 20px;
+    text-align: right;
+    right: 0;
+}
+.gallery-info a i {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    background: #dedede;
+    color: #1a1a1a;
+    font-size: 13px;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.gallery-img:hover {
+    filter: saturate(50%);
+}
+.user-photo {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+.user-photo img {
+    border-radius: 50px;
+
+}
+
+
+.nav-button {
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more {
+    padding: 1rem 3rem;
+    color: #fff;
+    background-color: #05a081;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info-text {
+    margin-left: 90px;
+    padding: 10px 30px;
+}
+
+
+
+@media (min-width:0px) and (max-width:600px) {
+
+    header , main  {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    header img {
+        width: 100%;
+        position: absolute;
+        right: 0;
+    }
+    .search-form  {
+        width: 100%;
+    }
+    .info-text {
+        font-size: 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        /* line-height: 20px; */
+    }
+    main .gallery {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+}
